@@ -137,6 +137,7 @@ ul li a:hover {
   width: 100%;
   height: 700px;
   position: relative;
+  margin-top: 0px;
 }
 
 .swiper-slide {
@@ -198,4 +199,9 @@ ul li a:hover {
 
 .swiper-button-next::before {
   transform: rotate(135deg);
+}
+@media (max-width: 650px) {
+  .swiper-container {
+    height: 500px;
+  }
 }
