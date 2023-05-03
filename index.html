@@ -46,6 +46,7 @@
 
     <title>soser view hotel apartments</title>
     <link rel="stylesheet" href="styles.css" />
+
     <!-- this is the code for favicon -->
     <link
       rel="apple-touch-icon"
@@ -172,6 +173,124 @@ P O BOX 187 Entebbe Uganda , plot 344 off prison rd Entebbe -->
     </div>
     <!-- ======the slider ends here=========== -->
 
+    <div class="blackGrey">
+      <div class="container noPad">
+        <div class="col-md-4 bg-black banner-temp">
+          <div class="timeTemp">
+            <p style="font-size: 10px">LOCAL TIME & TEMPERATURE</p>
+            <p>
+              <span id="current-time" class="kampala-time"></span>|
+              <span class="kampala-temp" id="weather"></span>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-8 bg-grey banner-form text-center noPad">
+          <div class="booking-form">
+            <a
+              class="see-more hidden-sm hidden-md hidden-lg"
+              type="button"
+              role="button"
+              data-toggle="collapse"
+              data-target="#hide-content"
+              href="#hide-content"
+              >FIND YOUR ROOM</a
+            >
+
+            <div class="collapse" id="hide-content">
+              <iframe
+                class="banner-form"
+                src="../../booking-widget.html"
+                width="100%"
+                height="100%"
+                style="border: none"
+                title="Booking Widget"
+              ></iframe>
+              <form
+                action="https://app.thebookingbutton.com/properties/mestildirect"
+                target="_blank"
+                class="ibe"
+                data-region="emea"
+                data-channelcode="mestildirect"
+              >
+                <input name="check_in_date" type="date" class="user-success" />
+
+                <input name="check_out_date" type="date" class="user-success" />
+
+                <input
+                  max="7"
+                  min="1"
+                  name="number_adults"
+                  type="number"
+                  placeholder="Adults"
+                />
+
+                <input
+                  max="3"
+                  min="0"
+                  name="number_children"
+                  type="number"
+                  placeholder="Children"
+                  class="user-success"
+                />
+
+                <button type="submit" class="but">SEARCH &nbsp;&gt;</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- =====form ends here====== -->
+    <!-- =====reservartins and others starts from here====== -->
+    <section>
+      <div class="container-fluid bg-black">
+        <div class="row text-center">
+          <div class="rollover-parent">
+            <div
+              class="home-rollover"
+              style="background-image: url('images/reservations/1.jpg')"
+            >
+              <div class="home-button">
+                <h3>
+                  <a title="Book" href="" target="_blank">RESERVATIONS</a>
+                </h3>
+              </div>
+            </div>
+            <div
+              class="home-rollover"
+              style="background-image: url('images/reservations/2.jpg')"
+            >
+              <div class="home-button">
+                <h3>
+                  <a title="Services" href="">SERVICES</a>
+                </h3>
+              </div>
+            </div>
+            <div
+              class="home-rollover"
+              style="background-image: url('images/reservations/3.jpg')"
+            >
+              <div class="home-button">
+                <h3>
+                  <a title="Accommodation" href="">ACCOMMODATION</a>
+                </h3>
+              </div>
+            </div>
+            <div
+              class="home-rollover"
+              style="background-image: url('images/reservations/5.jpg')"
+            >
+              <div class="home-button">
+                <h3>
+                  <a title="Offers" href="">OFFERS</a>
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="main.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -198,6 +317,18 @@ P O BOX 187 Entebbe Uganda , plot 344 off prison rd Entebbe -->
           prevEl: ".swiper-button-prev",
         },
       });
+    </script>
+    <script>
+      function updateTime() {
+        var now = new Date();
+        var timeString = now.toLocaleTimeString("en-US", {
+          hour: "numeric",
+          minute: "numeric",
+          hour12: true,
+        });
+        document.getElementById("current-time").textContent = timeString;
+      }
+      setInterval(updateTime, 1000); // update every second
     </script>
   </body>
 </html>
