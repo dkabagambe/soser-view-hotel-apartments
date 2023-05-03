@@ -227,6 +227,12 @@ ul li a:hover {
 /* blackgrey */
 .blackGrey {
   background: linear-gradient(90deg, #000 50%, #777 50%);
+  -webkit-text-size-adjust: 100%;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 25px;
+  margin-right: auto;
+  margin-left: auto;
 }
 .banner-form,
 .banner-temp {

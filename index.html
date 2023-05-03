@@ -331,6 +331,16 @@ P O BOX 187 Entebbe Uganda , plot 344 off prison rd Entebbe -->
           nextEl: ".swiper-button-next",
           prevEl: ".swiper-button-prev",
         },
+
+        // Enable pausing on hover
+        on: {
+          mouseenter: function () {
+            swiper.autoplay.stop();
+          },
+          mouseleave: function () {
+            swiper.autoplay.start();
+          },
+        },
       });
     </script>
     <script>
