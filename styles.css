@@ -377,7 +377,7 @@ form > input[type="number" i] {
 }
 @media screen and (max-width: 768px) {
   .home-rollover {
-    height: 100px;
+    height: 200px;
   }
 }
 @media screen and (max-width: 768px) {
