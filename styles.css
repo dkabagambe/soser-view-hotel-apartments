@@ -539,3 +539,61 @@ section {
 #scroll-to-top:hover {
   background-color: #777;
 }
+/* the footer starts from here */
+#footer {
+  background-color: #000;
+  color: #00facc;
+  border-top: solid #fff 7px;
+}
+.padBottom2em {
+  padding-bottom: 2em;
+}
+.padTop3em {
+  padding-top: 3em;
+}
+.awards {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.awards img {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+#footer p {
+  font-size: 14px;
+  line-height: 150%;
+}
+.footer-left {
+  font-size: 16px;
+}
+.margBottom2em {
+  margin-bottom: 1em;
+}
+#footer li,
+#footer li a {
+  text-transform: uppercase;
+  color: #fff;
+}
+#footer a {
+  color: #05ffd1;
+  text-decoration: none;
+}
+.footerList {
+  list-style: none;
+}
+.footerList > ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.unset-transform {
+  text-transform: none;
+}
+
+@media (min-width: 992px) {
+  .col-md-4 {
+    width: 33.33333333%;
+    float: left;
+  }
+}

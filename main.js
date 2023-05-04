@@ -5,7 +5,7 @@ hamburger.addEventListener("click", function (e) {
   hamburger.classList.toggle("cross");
 });
 
-// Get Uganda time
+// this is the javascript for the time
 function getUgandaTime() {
   const options = {
     timeZone: "Africa/Kampala",
@@ -26,3 +26,14 @@ function updateUgandaTime() {
 
 // Call updateUgandaTime function every second
 setInterval(updateUgandaTime, 1000);
+
+// this is the javascript for button up
+const scrollToTopButton = document.getElementById("scroll-to-top");
+
+scrollToTopButton.addEventListener("click", function () {
+  window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: "smooth",
+  });
+});
