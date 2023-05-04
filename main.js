@@ -4,3 +4,4 @@ hamburger.addEventListener("click", function (e) {
   ul.classList.toggle("show");
   hamburger.classList.toggle("cross");
 });
+// ===========this is the next image slider==========

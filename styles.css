@@ -228,11 +228,11 @@ ul li a:hover {
 .blackGrey {
   background: linear-gradient(90deg, #000 50%, #777 50%);
   -webkit-text-size-adjust: 100%;
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 25px;
   margin-right: auto;
   margin-left: auto;
+  height: 100px;
+  width: 100%;
+  display: block;
 }
 .banner-form,
 .banner-temp {
@@ -242,6 +242,7 @@ ul li a:hover {
 }
 .banner-temp {
   height: 100px;
+  font-size: 16px;
 }
 .timeTemp {
   display: inline-block;
@@ -256,6 +257,14 @@ ul li a:hover {
 .kampala-time {
   margin-right: 10px;
 }
+.booking-form {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+}
+
 form {
   display: block;
   margin-top: 0em;
@@ -312,6 +321,24 @@ form > input[type="number" i] {
   font-size: 13px;
   font-family: "Open Sans", sans-serif;
   display: inline-block;
+}
+.noPad {
+  padding: 0 !important;
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
 }
 /* -------reservations------------------- */
 .bg-black {
@@ -381,6 +408,23 @@ form > input[type="number" i] {
   font-size: 25px;
   line-height: 1.1;
 }
+@media (min-width: 992px) {
+  .col-md-4 {
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 992px) {
+  .col-md-4 {
+    float: left;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}
+
+section {
+  display: block;
+}
 @media screen and (max-width: 768px) {
   .home-rollover {
     height: 200px;
@@ -396,4 +440,39 @@ form > input[type="number" i] {
   h3 {
     font-size: 145% !important;
   }
+}
+/* ====================image slider 2========== */
+.slider-box {
+  text-align: center;
+  padding: 0 40px;
+}
+.logo-carousel {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+  -khtml-user-select: none;
+  -ms-touch-action: pan-y;
+  touch-action: pan-y;
+  -webkit-tap-highlight-color: transparent;
+}
+.logo-carousel.slide > img {
+  max-width: 100%;
+  height: auto;
+}
+/* new styles for the slick */
+.slick-slider {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.slick-slide img {
+  display: block;
+  width: 100%;
+  height: auto;
+  padding: 15px;
 }
