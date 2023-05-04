@@ -446,9 +446,15 @@ section {
   text-align: center;
   padding: 0 40px;
 }
+.container {
+  width: 100%;
+}
+
 .logo-carousel {
   position: relative;
-  display: block;
+  display: flex;
+  width: 100%;
+  height: auto;
   box-sizing: border-box;
   -webkit-user-select: none;
   -moz-user-select: none;
@@ -460,19 +466,22 @@ section {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-.logo-carousel.slide > img {
-  max-width: 100%;
+
+.logo-carousel .slide > img {
+  width: calc(100% - 30px);
+  max-width: 900px;
   height: auto;
+  margin: 0 15px;
 }
-/* new styles for the slick */
+
 .slick-slider {
-  width: 80%;
-  margin: 0 auto;
+  width: 100%;
+  margin: 0;
 }
 
 .slick-slide img {
   display: block;
   width: 100%;
   height: auto;
-  padding: 15px;
+  padding: 0;
 }
