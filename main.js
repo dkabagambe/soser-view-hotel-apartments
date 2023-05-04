@@ -4,17 +4,25 @@ hamburger.addEventListener("click", function (e) {
   ul.classList.toggle("show");
   hamburger.classList.toggle("cross");
 });
-// ===========this is the next image slider==========
-// get the element by its ID
-const timeElement = document.getElementById("current-time");
 
-// update the time every second
-setInterval(() => {
-  const now = new Date();
-  const timeString = now.toLocaleTimeString("en-US", {
+// Get Uganda time
+function getUgandaTime() {
+  const options = {
+    timeZone: "Africa/Kampala",
     hour: "numeric",
     minute: "numeric",
     hour12: true,
-  });
-  timeElement.innerText = timeString;
-}, 1000);
+  };
+  return new Date().toLocaleTimeString("en-US", options);
+}
+
+// Update Uganda time every second
+function updateUgandaTime() {
+  const ugandaTimeElement = document.getElementById("uganda-time");
+  if (ugandaTimeElement) {
+    ugandaTimeElement.textContent = getUgandaTime();
+  }
+}
+
+// Call updateUgandaTime function every second
+setInterval(updateUgandaTime, 1000);
