@@ -191,6 +191,11 @@ ul li a:hover {
   color: #d2a74a;
 }
 
+.swiper-pagination-bullet {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+}
 .swiper-button-prev:hover,
 .swiper-button-next:hover {
   background-color: transparent;
@@ -211,17 +216,46 @@ ul li a:hover {
   .swiper-container {
     height: 500px;
   }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 10px;
+    height: 10px;
+  }
+
+  .swiper-pagination-bullet {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+  }
 }
 
 @media (max-width: 768px) {
   .swiper-container {
     height: 480px;
   }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 8px;
+    height: 8px;
+    color: #f7ae0f;
+  }
 }
 @media (max-width: 400px) {
   .swiper-container {
     height: 240px;
     width: 100%;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: absolute;
+    top: 50%;
+    width: 5px;
+    height: 5px;
+    color: #f2a807;
   }
 }
 /* blackgrey */
