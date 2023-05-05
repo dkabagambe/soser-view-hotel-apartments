@@ -605,7 +605,6 @@ ol {
   }
 }
 /* styling for the top button */
-
 #myBtn {
   display: none;
   position: fixed;
@@ -620,18 +619,23 @@ ol {
   cursor: pointer;
   padding: 15px;
   border-radius: 10px;
+  -webkit-position: fixed;
+  -moz-position: fixed;
+  -ms-position: fixed;
 }
 
 #myBtn:hover {
   background-color: #777;
   color: #fff;
 }
+
 @media (max-width: 768px) {
   #myBtn {
     display: block;
     bottom: 15px;
   }
 }
+
 /* styling for the services page starts from here */
 .rsContainer {
   width: 100%;
