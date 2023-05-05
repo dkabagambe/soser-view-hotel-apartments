@@ -632,3 +632,112 @@ ol {
     bottom: 15px;
   }
 }
+/* styling for the services page starts from here */
+.rsContainer {
+  width: 100%;
+  height: 600px;
+  position: relative;
+  margin-top: 0px;
+  overflow: hidden;
+  padding: 0px;
+}
+.rsContent {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.rsContent > .rsImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  vertical-align: middle;
+  border: 0;
+  overflow-clip-margin: content-box;
+  overflow: clip;
+}
+img.rsImg {
+  max-width: none;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .rsContainer {
+    width: 100%;
+    height: 480px;
+    position: relative;
+  }
+  .rsContent > .rsImg {
+    width: 100%;
+    height: 480px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .rsContainer {
+    width: 100%;
+    height: 450px;
+    position: relative;
+  }
+  .rsContent > .rsImg {
+    width: 100%;
+    height: 450px;
+    margin: 0;
+  }
+}
+@media (max-width: 400px) {
+  .rsContainer {
+    height: 240px;
+    width: 100%;
+  }
+  .rsContent {
+    width: 100%;
+    height: 100%;
+  }
+  .rsContent > .rsImg {
+    width: 100% !important;
+    height: 240px;
+    text-align: center;
+    margin: 0;
+  }
+}
+.bg-lightgrey {
+  background-color: #edeeec;
+}
+.menulinkdiv {
+  display: inline-block;
+  font-size: 24px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+}
+.menulinkdiv a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  background-color: transparent;
+  outline: 0;
+  font-weight: 300;
+}
+
+a:focus {
+  color: #111212;
+}
+.menulinkdiv a:hover {
+  border-bottom: solid hsl(0, 0%, 0%) 1px;
+}
+.menusublinks {
+  text-align: center;
+}
+.menulinkdiv:not(:last-child):after {
+  content: "|";
+  font-size: 28px;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  margin: 0 20px;
+}
+.margBottom3em {
+  margin-bottom: 0em;
+}
+.container-fluid:before {
+  display: table;
+  content: " ";
+}
