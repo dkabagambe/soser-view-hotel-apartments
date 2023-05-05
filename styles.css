@@ -741,3 +741,16 @@ a:focus {
   display: table;
   content: " ";
 }
+.button1 {
+  font-size: 13px;
+  color: #000 !important;
+  background-color: #f2a807;
+  padding: 4px 70px;
+  margin-top: 10px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+}
+.button1:hover {
+  background-color: #777;
+}
