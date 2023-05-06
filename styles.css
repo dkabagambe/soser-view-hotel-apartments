@@ -758,3 +758,25 @@ a:focus {
 .button1:hover {
   background-color: #777;
 }
+/* 
+the styling for the gallery */
+
+.slick-dotted.slick-slider {
+  margin-bottom: 30px;
+  color: red;
+}
+.slick-slide img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+.gallery-img img {
+  max-height: 600px;
+  margin: auto;
+}
+.gallery-img {
+  text-align: center;
+}
+.biggest {
+  font-size: 300% !important;
+}
