@@ -225,6 +225,99 @@
       </div>
     </div>
     <!-- =====form ends here====== -->
+    <!-- ========================================== -->
+    <section class="reservation">
+      <div class="container">
+        <h2>Make a Reservation</h2>
+        <form action="#" method="POST" class="reservation-form">
+          <div class="form-group">
+            <label for="name">Name<span class="required">*</span></label>
+            <input name="name" type="text" placeholder="Your Name" required />
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email<span class="required">*</span></label>
+            <input
+              name="email"
+              type="email"
+              id="email"
+              placeholder="example@gmail.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="phone"
+              >Phone Number<span class="required">*</span></label
+            >
+            <input
+              name="phone"
+              type="tel"
+              id="phone"
+              required
+              placeholder="+1 555-555-5555"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="check-in-date"
+              >Check-in Date<span class="required">*</span></label
+            >
+            <input
+              name="check_in_date"
+              type="date"
+              id="check-in-date"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="check-out-date"
+              >Check-out Date<span class="required">*</span></label
+            >
+            <input
+              name="check_out_date"
+              type="date"
+              id="check-out-date"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="num-adults"
+              >Adults<span class="required">*</span></label
+            >
+            <input
+              name="number_adults"
+              type="number"
+              id="num-adults"
+              min="1"
+              max="7"
+              placeholder="1"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="num-children">Children</label>
+            <input
+              name="number_children"
+              type="number"
+              id="num-children"
+              min="0"
+              max="3"
+              placeholder="0"
+            />
+          </div>
+
+          <div class="form-group">
+            <button type="submit" class="btn">Reserve Now</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <!-- ========================================== -->
 
     <!-- this iswhere the buttop up starts -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
