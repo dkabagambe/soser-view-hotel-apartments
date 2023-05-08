@@ -186,9 +186,10 @@ ul li a:hover {
   width: 20px;
   height: 10px;
   margin-top: -10px;
-  z-index: 10;
+  z-index: 20;
   cursor: pointer;
   color: #d2a74a;
+  font-size: 1px; /* Adjust this value to change the font size */
 }
 
 .swiper-pagination-bullet {
@@ -222,6 +223,7 @@ ul li a:hover {
     top: 50%;
     width: 10px;
     height: 10px;
+    font-size: 5px;
   }
 
   .swiper-pagination-bullet {
@@ -242,6 +244,7 @@ ul li a:hover {
     width: 8px;
     height: 8px;
     color: #f7ae0f;
+    font-size: 3px;
   }
 }
 @media (max-width: 400px) {
@@ -254,6 +257,7 @@ ul li a:hover {
     position: absolute;
     top: 50%;
     width: 5px;
+    font-size: 2px;
     height: 5px;
     color: #f2a807;
   }
