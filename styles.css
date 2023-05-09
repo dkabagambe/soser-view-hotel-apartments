@@ -216,7 +216,7 @@ ul li a:hover {
 .swiper-button-next::before {
   transform: rotate(135deg);
 }
-@media (min-width: 768px) and (max-width: 991px) {
+@media (max-width: 991px) {
   .swiper-container {
     height: 500px;
   }
