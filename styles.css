@@ -617,6 +617,7 @@ ol {
 .unset-transform {
   text-transform: none;
   color: hsla(61, 100%, 52%, 0.96);
+  font-family: dosis;
 }
 
 @media (min-width: 992px) {
