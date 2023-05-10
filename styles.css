@@ -31,10 +31,7 @@ body {
 }
 p {
   font-family: garamond;
-  font-size: 22px;
-  line-height: normal;
-  word-spacing: normal;
-  letter-spacing: normal;
+  font-size: 20px;
 }
 .navigation img {
   width: 15vh;
