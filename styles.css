@@ -795,8 +795,13 @@ the styling for the gallery */
 .gallery-img {
   text-align: center;
 }
+.uppercase {
+  font-family: garamond;
+  font-size: 130%;
+}
 .biggest {
   font-size: 200% !important;
+  font-family: cormorant;
 }
 /* styling for the reservation form */
 .reservation {
