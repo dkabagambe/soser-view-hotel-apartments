@@ -524,10 +524,9 @@ section {
   touch-action: pan-y;
   -webkit-tap-highlight-color: transparent;
 }
-
 .logo-carousel .slide > img {
   width: calc(100% - 30px);
-  max-width: 900px;
+  max-width: 90%;
   height: auto;
   margin: 0 15px;
 }
@@ -586,7 +585,7 @@ section {
   padding-right: 15px;
 }
 #footer p {
-  font-size: 14px;
+  font-size: 20px;
   line-height: 150%;
 }
 .footer-left {
@@ -595,7 +594,6 @@ section {
 .margBottom2em {
   margin-bottom: 1em;
   line-height: 1.5;
-  font-family: monospace;
 }
 #footer li,
 #footer li a {
@@ -605,6 +603,8 @@ section {
 #footer a {
   color: #05ffd1;
   text-decoration: none;
+  font-family: garamond;
+  font-size: 18px;
 }
 .footerList {
   list-style: none;
