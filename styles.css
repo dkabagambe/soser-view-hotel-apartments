@@ -616,6 +616,7 @@ ol {
 }
 .unset-transform {
   text-transform: none;
+  color: hsla(61, 100%, 52%, 0.96);
 }
 
 @media (min-width: 992px) {
