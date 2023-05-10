@@ -526,7 +526,7 @@ section {
 }
 .logo-carousel .slide > img {
   width: calc(100% - 30px);
-  max-width: 90%;
+  max-width: 100%;
   height: auto;
   margin: 0 15px;
 }
