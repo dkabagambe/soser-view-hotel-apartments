@@ -84,7 +84,7 @@ ul li a:hover {
 .header-hamburger-line-2 {
   margin-bottom: 6px;
 }
-@media (max-width: 850px) {
+@media (max-width: 768px) {
   .header-hamburger-icon {
     display: flex;
     cursor: pointer;
@@ -101,8 +101,11 @@ ul li a:hover {
     transition: right 0.3s ease-in;
     margin: 5px;
     text-align: center;
-    transform: translateX(20%);
+    /* remove the transform property */
+    /* transform: translateX(20%); */
     z-index: 15;
+    /* add the right property */
+    right: -100%;
   }
   ul li {
     margin-right: 0px;
@@ -114,7 +117,8 @@ ul li a:hover {
     font-weight: 600;
   }
   .show {
-    transform: translateX(0%);
+    /* remove the transform property */
+    /* transform: translateX(0%); */
     transition: right 0.3s ease-in;
     background-color: #000000;
     top: 8vh;
@@ -127,6 +131,8 @@ ul li a:hover {
     justify-content: center;
     align-items: center;
     z-index: 10;
+    /* add the right property */
+    right: 0;
   }
   .cross .header-hamburger-line-2 {
     opacity: 0;
@@ -138,6 +144,7 @@ ul li a:hover {
     transform: rotate(45deg) translate(-5px, -7px);
   }
 }
+
 /* swiper slider  */
 .swiper-container {
   width: 100%;
