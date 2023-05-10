@@ -29,6 +29,10 @@ body {
   list-style: none;
   padding: 2rem 0;
 }
+p {
+  font-family: garamond;
+  font-size: 22px;
+}
 .navigation img {
   width: 15vh;
   margin-left: 10px;
