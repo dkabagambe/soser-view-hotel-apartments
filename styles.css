@@ -796,7 +796,7 @@ the styling for the gallery */
   text-align: center;
 }
 .biggest {
-  font-size: 300% !important;
+  font-size: 200% !important;
 }
 /* styling for the reservation form */
 .reservation {
