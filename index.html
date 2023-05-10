@@ -427,40 +427,37 @@
     <script src="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.0/oyethemes_onscroll_animation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
     <script>
-const swiper = new Swiper(".swiper-container", {
-        // Optional parameters
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-        },
-        loop: true,
-        speed: 500,
-        pauseOnHover: true,
-        autoplaySpeed: 3000,
-        
+   const swiper = new Swiper(".swiper-container", {
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  loop: true,
+  speed: 500,
 
-        // If we need pagination
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
+  // If we need pagination
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
 
-        // Navigation arrows
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
+  // Navigation arrows
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
 
-        // Enable pausing on hover
-        on: {
-          mouseenter: function () {
-            swiper.autoplay.stop();
-          },
-          mouseleave: function () {
-            swiper.autoplay.start();
-          },
-        },
-      })
+});
+
+// Enable pausing on hover
+swiper.el.addEventListener('mouseenter', function () {
+  swiper.autoplay.stop();
+});
+
+swiper.el.addEventListener('mouseleave', function () {
+  swiper.autoplay.start();
+});
+
     </script>
     <script>
      $(".logo-carousel").slick({
