@@ -615,9 +615,11 @@ ol {
   margin-bottom: 10px;
 }
 .unset-transform {
-  text-transform: none;
-  color: hsla(61, 100%, 52%, 0.96);
-  font-family: dosis;
+  text-transform: lowercase;
+  font-family: garamond;
+  line-height: normal;
+  font-weight: 550;
+  color: #d2a74a;
 }
 
 @media (min-width: 992px) {
