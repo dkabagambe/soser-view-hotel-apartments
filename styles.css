@@ -25,8 +25,11 @@ body {
     overflow-x: hidden;
     scrollbar-width: none; /* Firefox */
     -ms-overflow-style: none; /* Internet Explorer and Edge */
-    ::-webkit-scrollbar {
-      width: 0; /* Chrome, Safari, and Opera */
+    &::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, and newer versions of Opera */
+    }
+    & {
+      -webkit-overflow-scrolling: touch; /* iOS */
     }
   }
 }
