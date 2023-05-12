@@ -47,18 +47,3 @@ mybutton.addEventListener("click", function () {
 });
 
 // this is setting for disabling the scroll behavior
-function preventHorizontalScroll(e) {
-  if (e.wheelDeltaX !== 0 || e.deltaX !== 0 || e.changedTouches) {
-    e.preventDefault();
-  }
-}
-
-document.addEventListener("touchmove", preventHorizontalScroll, {
-  passive: false,
-});
-document.addEventListener("mousewheel", preventHorizontalScroll, {
-  passive: false,
-});
-document.addEventListener("DOMMouseScroll", preventHorizontalScroll, {
-  passive: false,
-});
