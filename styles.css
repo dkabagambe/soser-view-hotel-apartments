@@ -10,7 +10,7 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+/* to avoid horizontal scroll,you must set the position relative,height 100% ,and overflow-x: hidden; inorder to work */
 html,
 body {
   background-color: #fff;
