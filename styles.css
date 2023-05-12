@@ -18,6 +18,12 @@ body {
   overflow-x: hidden;
   height: 100%;
 }
+@media (max-width: 767px) {
+  body {
+    height: 100%;
+    overflow-x: hidden;
+  }
+}
 
 .navigation {
   width: 100%;
