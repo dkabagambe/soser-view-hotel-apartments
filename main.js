@@ -49,8 +49,11 @@ mybutton.addEventListener("click", function () {
 // this is setting for disabling the scroll
 // Wait for the DOM to load before adding event listeners
 document.addEventListener("DOMContentLoaded", function () {
-  // Disable horizontal scrolling on the body element
-  document.body.style.overflowX = "hidden";
+  // Disable horizontal scrolling on all elements
+  let allElements = document.getElementsByTagName("*");
+  for (let i = 0; i < allElements.length; i++) {
+    allElements[i].style.overflowX = "hidden";
+  }
 
   // Add touch event listeners to prevent scrolling on touch devices
   let isTouchDevice = "ontouchstart" in document.documentElement;
