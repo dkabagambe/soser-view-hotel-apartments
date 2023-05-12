@@ -16,23 +16,6 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
-/* Hide scrollbar on mobile devices */
-@media only screen and (max-width: 767px) {
-  html {
-    overflow-x: hidden;
-  }
-  body {
-    overflow-x: hidden;
-    scrollbar-width: none; /* Firefox */
-    -ms-overflow-style: none; /* Internet Explorer and Edge */
-    &::-webkit-scrollbar {
-      display: none; /* Chrome, Safari, and newer versions of Opera */
-    }
-    & {
-      -webkit-overflow-scrolling: touch; /* iOS */
-    }
-  }
-}
 
 .navigation {
   width: 100%;
