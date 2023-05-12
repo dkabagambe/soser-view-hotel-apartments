@@ -49,26 +49,32 @@ mybutton.addEventListener("click", function () {
 // this is setting for disabling the scroll
 // Wait for the DOM to load before adding event listeners
 document.addEventListener("DOMContentLoaded", function () {
-  // Track the starting touch position
-  let startX;
+  // Disable horizontal scrolling on the body element
+  document.body.style.overflowX = "hidden";
 
-  // Add a touchstart event listener to track the starting touch position
-  document.addEventListener("touchstart", function (event) {
-    startX = event.touches[0].clientX;
-  });
+  // Add touch event listeners to prevent scrolling on touch devices
+  let isTouchDevice = "ontouchstart" in document.documentElement;
+  if (isTouchDevice) {
+    let touchStartX;
 
-  // Add a touchmove event listener to prevent horizontal scrolling
-  document.addEventListener(
-    "touchmove",
-    function (event) {
-      // Get the distance moved since the touchstart event
-      const distanceX = event.touches[0].clientX - startX;
+    document.addEventListener(
+      "touchstart",
+      function (event) {
+        touchStartX = event.touches[0].clientX;
+      },
+      { passive: true }
+    );
 
-      // If the distance moved is greater than 10px, prevent scrolling horizontally
-      if (Math.abs(distanceX) > 10) {
-        event.preventDefault();
-      }
-    },
-    { passive: false }
-  );
+    document.addEventListener(
+      "touchmove",
+      function (event) {
+        let touchMoveX = event.touches[0].clientX;
+        let touchDistanceX = touchMoveX - touchStartX;
+        if (Math.abs(touchDistanceX) > 10) {
+          event.preventDefault();
+        }
+      },
+      { passive: false }
+    );
+  }
 });
