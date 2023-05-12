@@ -46,4 +46,24 @@ mybutton.addEventListener("click", function () {
   document.documentElement.scrollTop = 0;
 });
 
-// this is setting for disabling the scroll behavior
+// this is setting for disabling the scroll
+document.addEventListener(
+  "touchmove",
+  function (e) {
+    // Only prevent horizontal scrolling
+    if (
+      Math.abs(e.touches[0].clientX - touchStartX) >
+      Math.abs(e.touches[0].clientY - touchStartY)
+    ) {
+      e.preventDefault();
+    }
+  },
+  { passive: false }
+);
+
+let touchStartX, touchStartY;
+
+document.addEventListener("touchstart", function (e) {
+  touchStartX = e.touches[0].clientX;
+  touchStartY = e.touches[0].clientY;
+});
