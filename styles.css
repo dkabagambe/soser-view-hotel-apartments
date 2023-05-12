@@ -16,10 +16,18 @@ body {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
 }
-@media (max-width: 767px) {
-  body {
-    height: 100%;
+/* Hide scrollbar on mobile devices */
+@media only screen and (max-width: 767px) {
+  html {
     overflow-x: hidden;
+  }
+  body {
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* Internet Explorer and Edge */
+    ::-webkit-scrollbar {
+      width: 0; /* Chrome, Safari, and Opera */
+    }
   }
 }
 
