@@ -753,16 +753,20 @@ img.rsImg {
   background-color: transparent;
   outline: 0;
   font-weight: 300;
+  cursor: pointer;
 }
-
+.menusublinks .active .sublink-button {
+  border-bottom: solid #90d3c7 1px;
+}
 a:focus {
-  color: #111212;
+  cursor: pointer;
 }
 .menulinkdiv a:hover {
   border-bottom: solid hsl(0, 0%, 0%) 1px;
 }
 .menusublinks {
   text-align: center;
+  padding: 5px;
 }
 .menulinkdiv:not(:last-child):after {
   content: "|";

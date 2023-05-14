@@ -45,5 +45,3 @@ mybutton.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
-
-// this is setting for disabling the scroll
