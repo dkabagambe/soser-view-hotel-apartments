@@ -744,15 +744,13 @@ img.rsImg {
   display: inline-block;
   font-size: 24px;
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
 }
 .menulinkdiv a {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
   background-color: transparent;
-  outline: 0;
-  font-weight: 300;
+  font-weight: 500;
   cursor: pointer;
 }
 .menusublinks .active .sublink-button {
@@ -762,7 +760,7 @@ a:focus {
   cursor: pointer;
 }
 .menulinkdiv a:hover {
-  border-bottom: solid hsl(0, 0%, 0%) 1px;
+  border-bottom: solid hsl(0, 0%, 0%) 2px;
 }
 .menusublinks {
   text-align: center;
@@ -773,7 +771,7 @@ a:focus {
   font-size: 28px;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  margin: 0 20px;
+  margin: 2px 20px;
 }
 .margBottom3em {
   margin-bottom: 0em;
