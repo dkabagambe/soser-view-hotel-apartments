@@ -752,6 +752,7 @@ img.rsImg {
   background-color: transparent;
   font-weight: 500;
   cursor: pointer;
+  padding: 10px 2px;
 }
 .menusublinks .active .sublink-button {
   border-bottom: solid #90d3c7 1px;
@@ -760,7 +761,8 @@ a:focus {
   cursor: pointer;
 }
 .menulinkdiv a:hover {
-  border-bottom: solid hsl(0, 0%, 0%) 2px;
+  /* text-decoration: underline; */
+  color: #000;
 }
 .menusublinks {
   text-align: center;
