@@ -45,3 +45,13 @@ mybutton.addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+// Get all the links with the sublink-button class
+const links = document.querySelectorAll(".sublink-button");
+
+// Loop through each link and add a click event listener
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    // Redirect to the link's href property
+    window.location.href = link.href;
+  });
+});

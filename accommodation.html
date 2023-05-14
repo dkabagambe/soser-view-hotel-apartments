@@ -227,6 +227,30 @@
     </div>
     <!-- =====form ends here====== -->
     <!-- ============services main page information is here========== -->
+
+    <section>
+      <div class="container-fluid bg-lightgrey">
+        <div class="row text-center">
+          <div class="container text-center padTop3em padBottom3em">
+            <img
+              class="align-center margBottom1em"
+              src="images/logo-modified.png"
+              alt=""
+              width="30"
+              height="44"
+            />
+            <h4>WELCOME TO SOSER VIEW HOTEL APARTMENTS</h4>
+            <p>
+              Soser View Hotel Apartments' suites allow guests comfort,
+              flexibility, and independence, with larger residences ideal for
+              the business or leisure traveler. Our location, sophisticated
+              ambiance, and welcoming living spaces make our hotel a great value
+              choice
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
     <section id="content">
       <!-- <p class="breadcrumbs"><a href="/">Home</a> &gt; Accommodation</p>-->
 
@@ -246,30 +270,6 @@
           </div>
         </div>
       </div>
-
-      <section>
-        <div class="container-fluid bg-lightgrey">
-          <div class="row text-center">
-            <div class="container text-center padTop3em padBottom3em">
-              <img
-                class="align-center margBottom1em"
-                src="images/logo-modified.png"
-                alt=""
-                width="30"
-                height="44"
-              />
-              <h4>WELCOME TO SOSER VIEW HOTEL APARTMENTS</h4>
-              <p>
-                Soser View Hotel Apartments' suites allow guests comfort,
-                flexibility, and independence, with larger residences ideal for
-                the business or leisure traveler. Our location, sophisticated
-                ambiance, and welcoming living spaces make our hotel a great
-                value choice
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
     </section>
     <!-- this iswhere the buttop up starts -->
     <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
@@ -385,5 +385,17 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/gh/shishirraven/animate-on-scroll@v1.0/oyethemes_onscroll_animation.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <script>
+      // Get all the links with the sublink-button class
+      const links = document.querySelectorAll(".sublink-button");
+
+      // Loop through each link and add a click event listener
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          // Redirect to the link's href property
+          window.location.href = link.href;
+        });
+      });
+    </script>
   </body>
 </html>
