@@ -22,7 +22,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $headers .= "Reply-To: $email\r\n";
 
     if (mail($to, $subject, $message, $headers)) {
-        echo '<p>Reservation request sent successfully. We will contact you shortly.</p>';
+        // Redirect to home page
+        echo '<script>window.location.href = "index.html";</script>';
+        exit;
     } else {
         echo '<p>Oops! An error occurred while sending the reservation request. Please try again later.</p>';
     }
