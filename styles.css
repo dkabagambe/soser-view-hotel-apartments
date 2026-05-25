@@ -574,9 +574,9 @@ section {
 }
 /* the footer starts from here */
 #footer {
-  background-color: #000;
-  color: #00facc;
-  border-top: solid #fff 7px;
+  background-color: #0a0a0a;
+  color: #ccc;
+  border-top: solid #d2a74a 3px;
 }
 .padBottom2em {
   padding-bottom: 2em;
@@ -593,35 +593,121 @@ section {
   padding-left: 15px;
   padding-right: 15px;
 }
-#footer p {
-  font-size: 20px;
-  line-height: 150%;
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  padding: 3rem 2rem;
 }
-.footer-left {
+.footer-col h4 {
+  color: #d2a74a;
+  font-size: 18px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #333;
+}
+.footer-col p,
+.footer-col address {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #aaa;
+  font-style: normal;
+}
+.footer-col a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.footer-col a:hover {
+  color: #d2a74a;
+}
+.footer-brand-name {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-nav-list li {
+  margin-bottom: 0.5rem;
+}
+.footer-nav-list li a {
+  font-size: 18px;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.footer-nav-list li a:hover {
+  color: #d2a74a;
+}
+.footer-contact-item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.footer-contact-item span {
   font-size: 16px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: #d2a74a;
+  margin-bottom: 0.2rem;
+}
+.footer-social {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 1.2rem;
+}
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  color: #aaa;
+  font-size: 16px;
+  transition:
+    border-color 0.2s,
+    color 0.2s;
+}
+.footer-social a:hover {
+  border-color: #d2a74a;
+  color: #d2a74a;
+}
+.footer-bottom {
+  border-top: 1px solid #222;
+  padding: 1.2rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.footer-bottom p {
+  font-size: 18px;
+  color: #d4eb08;
+  margin: 0;
 }
 .margBottom2em {
   margin-bottom: 1em;
   line-height: 1.5;
 }
-#footer li,
-#footer li a {
-  text-transform: uppercase;
-  color: #fff;
-}
-#footer a {
-  color: #05ffd1;
-  text-decoration: none;
-  font-family: garamond;
-  font-size: 18px;
-}
 .footerList {
   list-style: none;
-}
-.footerList > ul,
-ol {
-  margin-top: 0;
-  margin-bottom: 10px;
 }
 .unset-transform {
   text-transform: lowercase;
@@ -629,6 +715,23 @@ ol {
   line-height: normal;
   font-weight: 550;
   color: #d2a74a;
+}
+@media (max-width: 767px) {
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    padding: 2rem 0 1.5rem;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 }
 
 @media (min-width: 992px) {
@@ -1133,7 +1236,9 @@ the styling for the gallery */
 #qlwapp .qlwapp-toggle {
   pointer-events: all;
   cursor: pointer;
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.06), 0 2px 32px 0 rgba(0, 0, 0, 0.16);
+  box-shadow:
+    0 1px 6px 0 rgba(0, 0, 0, 0.06),
+    0 2px 32px 0 rgba(0, 0, 0, 0.16);
   margin-top: 24px;
   margin-bottom: 24px;
   position: relative;
@@ -1599,7 +1704,8 @@ the styling for the gallery */
 }
 #qlwapp.qlwapp-bubble .qlwapp-toggle .qlwapp-icon,
 #qlwapp.qlwapp-bubble .qlwapp-toggle .qlwapp-close {
-  transition: transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1),
+  transition:
+    transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 300ms ease-in;
 }
 #qlwapp .qlwapp-box {
@@ -1607,7 +1713,8 @@ the styling for the gallery */
   opacity: 0;
   visibility: hidden;
   transform: translateY(50px);
-  transition: transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1),
+  transition:
+    transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 300ms ease-in;
 }
 @media (min-width: 430px) {
@@ -1622,7 +1729,8 @@ the styling for the gallery */
 }
 #qlwapp .qlwapp-box .qlwapp-carousel .qlwapp-slide {
   width: 50%;
-  transition: max-height 500ms cubic-bezier(0.215, 0.61, 0.355, 1) 1000ms,
+  transition:
+    max-height 500ms cubic-bezier(0.215, 0.61, 0.355, 1) 1000ms,
     transform 300ms cubic-bezier(0.215, 0.61, 0.355, 1) 500ms,
     opacity 500ms ease-in 500ms;
 }
@@ -1633,7 +1741,8 @@ the styling for the gallery */
 #qlwapp .qlwapp-box .qlwapp-header .qlwapp-label,
 #qlwapp .qlwapp-box .qlwapp-header .qlwapp-avatar {
   opacity: 0;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
+  transition:
+    transform cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s,
     opacity ease-in 0.3s;
 }
 #qlwapp .qlwapp-box .qlwapp-header .qlwapp-name,
@@ -1657,7 +1766,8 @@ the styling for the gallery */
 #qlwapp .qlwapp-box .qlwapp-previous,
 #qlwapp .qlwapp-box .qlwapp-message,
 #qlwapp .qlwapp-box .qlwapp-user {
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 600ms,
+  transition:
+    transform cubic-bezier(0.215, 0.61, 0.355, 1) 600ms,
     opacity ease-in 200ms;
 }
 #qlwapp .qlwapp-box .qlwapp-response,
@@ -1678,11 +1788,13 @@ the styling for the gallery */
   transition: opacity 300ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 #qlwapp .qlwapp-box .qlwapp-description {
-  transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1),
+  transition:
+    transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 900ms cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 #qlwapp .qlwapp-box .qlwapp-account {
-  transition: transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1),
+  transition:
+    transform 600ms cubic-bezier(0.215, 0.61, 0.355, 1),
     opacity 150ms ease-in;
 }
 #qlwapp .qlwapp-box .qlwapp-previous {
@@ -1800,7 +1912,8 @@ the styling for the gallery */
   transition-delay: 0ms;
   transform: translateX(-24px);
   opacity: 0;
-  transition: transform cubic-bezier(0.215, 0.61, 0.355, 1) 300ms,
+  transition:
+    transform cubic-bezier(0.215, 0.61, 0.355, 1) 300ms,
     opacity ease-out 200ms;
 }
 #qlwapp .qlwapp-box.closing .qlwapp-description {
