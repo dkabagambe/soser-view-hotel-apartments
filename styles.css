@@ -616,7 +616,7 @@ section {
   font-style: normal;
 }
 .footer-col a {
-  color: #ccc;
+  color: #fff;
   text-decoration: none;
   font-size: 18px;
   transition: color 0.2s;
@@ -642,7 +642,7 @@ section {
 }
 .footer-nav-list li a {
   font-size: 18px;
-  color: #aaa;
+  color: #fff;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -840,8 +840,10 @@ img.rsImg {
     margin: 0;
   }
 }
-.bg-lightgrey {
+.bg-lightgrey,
+.bg-white {
   background-color: #edeeec;
+  text-align: center;
 }
 .menulinkdiv {
   display: inline-block;
