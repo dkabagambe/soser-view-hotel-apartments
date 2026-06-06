@@ -908,6 +908,7 @@ the styling for the gallery */
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
   color: #ffffff;
+  background-color: #edeeec;
 }
 .slick-slide img {
   max-width: 100%;
