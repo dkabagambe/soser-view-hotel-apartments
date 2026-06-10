@@ -27,6 +27,24 @@ function updateUgandaTime() {
 // Call updateUgandaTime function every second
 setInterval(updateUgandaTime, 1000);
 
+// Fetch Uganda (Kampala) temperature from Open-Meteo
+async function updateUgandaTemp() {
+  const el = document.getElementById("uganda-weather");
+  if (!el) return;
+  try {
+    const res = await fetch(
+      "https://api.open-meteo.com/v1/forecast?latitude=0.3476&longitude=32.5825&current_weather=true"
+    );
+    const data = await res.json();
+    el.textContent = data.current_weather.temperature + "°C";
+  } catch {
+    el.textContent = "--°C";
+  }
+}
+
+updateUgandaTemp();
+setInterval(updateUgandaTemp, 10 * 60 * 1000); // refresh every 10 min
+
 // this is the javascript for button up
 //Get the button
 const mybutton = document.getElementById("myBtn");
