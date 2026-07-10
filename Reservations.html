@@ -373,15 +373,24 @@
       (function () {
         var params = new URLSearchParams(window.location.search);
         if (params.get('success') === '1') {
+          // Show success notice briefly then clear URL and scroll to top
           document.getElementById('reservation-success').style.display = 'flex';
-          // Scroll to it
-          document.getElementById('reservation-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
-          // Hide the form since it was submitted
-          document.getElementById('reservation-form').style.display = 'none';
+          window.scrollTo({ top: document.querySelector('.reservation').offsetTop - 80, behavior: 'smooth' });
+          // After 4 seconds, hide notice and clean the URL
+          setTimeout(function () {
+            document.getElementById('reservation-success').style.opacity = '0';
+            document.getElementById('reservation-success').style.transition = 'opacity 0.6s ease';
+            setTimeout(function () {
+              document.getElementById('reservation-success').style.display = 'none';
+              // Remove ?success=1 from URL without reloading
+              window.history.replaceState({}, document.title, window.location.pathname);
+            }, 600);
+          }, 4000);
         }
         if (params.get('error') === '1') {
           document.getElementById('reservation-error').style.display = 'flex';
           document.getElementById('reservation-error').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          window.history.replaceState({}, document.title, window.location.pathname);
         }
       })();
 
