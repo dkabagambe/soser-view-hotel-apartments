@@ -232,6 +232,29 @@
         <h2>Make a Reservation</h2>
         <p class="reservation-intro">Choose your preferred accommodation and fill in your details. We'll confirm your booking by email or phone.</p>
 
+        <!-- Success message -->
+        <div id="reservation-success" class="reservation-notice reservation-notice--success" style="display:none;">
+          <i class="fas fa-check-circle"></i>
+          <div>
+            <strong>Reservation received!</strong>
+            <p>Thank you. We have received your request and will contact you shortly to confirm.</p>
+          </div>
+        </div>
+
+        <!-- Error message -->
+        <div id="reservation-error" class="reservation-notice reservation-notice--error" style="display:none;">
+          <i class="fas fa-exclamation-circle"></i>
+          <div>
+            <strong>Submission failed.</strong>
+            <p>We could not send your reservation automatically. Please contact us directly:</p>
+            <p>
+              <a href="tel:+256776660792">+256 776 660 792</a> &nbsp;|&nbsp;
+              <a href="mailto:reservations@soserviewhotelapartments.com">reservations@soserviewhotelapartments.com</a> &nbsp;|&nbsp;
+              <a href="https://api.whatsapp.com/send?phone=256776662803&text=Hello!%20I%20would%20like%20to%20make%20a%20reservation." target="_blank">WhatsApp us</a>
+            </p>
+          </div>
+        </div>
+
         <!-- Accommodation type cards -->
         <div class="room-type-selector">
           <h3>Select Accommodation Type</h3>
@@ -346,6 +369,22 @@
     </section>
 
     <script>
+      // Show success or error notice based on URL param
+      (function () {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get('success') === '1') {
+          document.getElementById('reservation-success').style.display = 'flex';
+          // Scroll to it
+          document.getElementById('reservation-success').scrollIntoView({ behavior: 'smooth', block: 'center' });
+          // Hide the form since it was submitted
+          document.getElementById('reservation-form').style.display = 'none';
+        }
+        if (params.get('error') === '1') {
+          document.getElementById('reservation-error').style.display = 'flex';
+          document.getElementById('reservation-error').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      })();
+
       // Clicking a room card updates the dropdown
       document.querySelectorAll('input[name="room_type_radio"]').forEach(function (radio) {
         radio.addEventListener('change', function () {

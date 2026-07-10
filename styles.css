@@ -951,6 +951,61 @@ the styling for the gallery */
   font-size: 1rem;
 }
 
+/* Success / error notices */
+.reservation-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 20px 24px;
+  border-radius: 8px;
+  margin-bottom: 32px;
+  font-size: 0.97rem;
+  line-height: 1.6;
+}
+
+.reservation-notice i {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.reservation-notice p {
+  margin: 4px 0 0;
+}
+
+.reservation-notice a {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+.reservation-notice--success {
+  background: #eafaf1;
+  border: 1px solid #a9dfbf;
+  color: #1e8449;
+}
+
+.reservation-notice--success i {
+  color: #27ae60;
+}
+
+.reservation-notice--success a {
+  color: #1e8449;
+}
+
+.reservation-notice--error {
+  background: #fdf3f3;
+  border: 1px solid #f5c6c6;
+  color: #922b21;
+}
+
+.reservation-notice--error i {
+  color: #e74c3c;
+}
+
+.reservation-notice--error a {
+  color: #922b21;
+}
+
 /* ── Room-type card selector ── */
 .room-type-selector {
   max-width: 1000px;

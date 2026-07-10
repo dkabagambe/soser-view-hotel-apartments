@@ -28,14 +28,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $body .= "Message:        $message\n";
     }
 
-    $headers  = "From: $email\r\n";
+    // From must be a verified email on YOUR domain — this is what hosts require
+    $headers  = "From: reservations@soserviewhotelapartments.com\r\n";
     $headers .= "Reply-To: $email\r\n";
     $headers .= "X-Mailer: PHP/" . phpversion();
 
     if (mail($to, $subject, $body, $headers)) {
-        header('Location: index.html?reservation=success');
+        header('Location: Reservations.html?success=1');
         exit;
     } else {
+        // Log actual error for debugging
+        error_log('mail() failed for reservation from: ' . $name . ' | ' . $email);
         header('Location: Reservations.html?error=1');
         exit;
     }
